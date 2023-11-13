@@ -8,9 +8,6 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 import { galleryItems } from './gallery-items';
 // Change code below this line
 
-
-let instance;
-
 // Gallery markup
 function createGalleryItem (preview, original, description) {
     const galleryItem =
@@ -29,7 +26,7 @@ const galleryContent = galleryItems.map(({preview, original, description}) => cr
 const galleryElement = document.querySelector (".gallery");
 galleryElement.insertAdjacentHTML ("beforeend", galleryContent);
 
-instance = new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery a', {
     captionsData: "alt",
     captionDelay: 250,
     captionClass: "image-caption"
