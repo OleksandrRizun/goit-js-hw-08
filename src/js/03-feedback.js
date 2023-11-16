@@ -20,6 +20,9 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     let email = form.elements.email.value;
     let message = form.elements.message.value;
+    if (!email || !message) {
+        return alert("Please fill in all fields of the form!")
+    }
     const obj = {
         email,
         message
